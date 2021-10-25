@@ -1,0 +1,29 @@
+{% extends "User/home.html" %}
+{% load static %}
+{% block body %}
+
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 10px">Id</th>
+                      <th>Surveys</th>
+                      <th>Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for value in CreateSurvey %}
+                    <tr>
+                      <td>{{ value.id }}</td>
+                      <td>{{ value.heading }}</td>
+                      <td>
+                        <a href="{% url 'create-view' value.id %}">Answer</a>
+                        <a href="{% url 'create-delete' value.id %}">Delete</a>
+                      </td>
+                    </tr>
+
+                  {% endfor %}
+                  </tbody>
+                </table>
+
+{% endblock %}

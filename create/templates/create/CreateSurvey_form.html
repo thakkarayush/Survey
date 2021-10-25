@@ -1,0 +1,760 @@
+{% extends "User/home.html" %}
+{% load static %}
+{% load crispy_forms_field %}
+{% block body %}
+    <form id="quickForm" method="post">
+{% csrf_token %}
+<div class="col-md-12">
+    <div class="card card-success">
+        <div class="card-body"style="background-color: skyblue">
+        <div class="form-group" >
+            <label style="color: black;font-weight: 5000;">Heading of the survey:-</label><br><br>
+           {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.heading %}
+        {% if form.heading.errors %}
+            {% for error in form.heading.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+        </div>
+    </div>
+{# Question 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 1</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question1 %}
+        {% if form.question1.errors %}
+            {% for error in form.question1.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option1 %}
+                {% if form.option1.errors %}
+                    {% for error in form.option1.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option2 %}
+                {% if form.option2.errors %}
+                    {% for error in form.option2.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option3 %}
+                {% if form.option3.errors %}
+                    {% for error in form.option3.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option4 %}
+                {% if form.option4.errors %}
+                    {% for error in form.option4.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 2</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question2 %}
+        {% if form.question2.errors %}
+            {% for error in form.question2.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option12 %}
+                {% if form.option12.errors %}
+                    {% for error in form.option12.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option22 %}
+                {% if form.option22.errors %}
+                    {% for error in form.option22.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option32 %}
+                {% if form.option32.errors %}
+                    {% for error in form.option32.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option42 %}
+                {% if form.option42.errors %}
+                    {% for error in form.option42.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+{# Question 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 3</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question3 %}
+        {% if form.question3.errors %}
+            {% for error in form.question3.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option13 %}
+                {% if form.option13.errors %}
+                    {% for error in form.option13.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option23 %}
+                {% if form.option23.errors %}
+                    {% for error in form.option23.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option33 %}
+                {% if form.option33.errors %}
+                    {% for error in form.option33.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option43 %}
+                {% if form.option43.errors %}
+                    {% for error in form.option43.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+{# Question 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 4</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question4 %}
+        {% if form.question4.errors %}
+            {% for error in form.question4.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option14 %}
+                {% if form.option14.errors %}
+                    {% for error in form.option14.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option24 %}
+                {% if form.option24.errors %}
+                    {% for error in form.option24.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option34 %}
+                {% if form.option34.errors %}
+                    {% for error in form.option34.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option44 %}
+                {% if form.option44.errors %}
+                    {% for error in form.option44.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 5 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 5</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question5 %}
+        {% if form.question5.errors %}
+            {% for error in form.question5.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option15 %}
+                {% if form.option15.errors %}
+                    {% for error in form.option15.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option25 %}
+                {% if form.option25.errors %}
+                    {% for error in form.option25.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option35 %}
+                {% if form.option35.errors %}
+                    {% for error in form.option35.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option45 %}
+                {% if form.option45.errors %}
+                    {% for error in form.option45.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 6 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 6</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question6 %}
+        {% if form.question6.errors %}
+            {% for error in form.question6.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option16 %}
+                {% if form.option16.errors %}
+                    {% for error in form.option16.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option26 %}
+                {% if form.option26.errors %}
+                    {% for error in form.option26.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option36 %}
+                {% if form.option36.errors %}
+                    {% for error in form.option36.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option46 %}
+                {% if form.option46.errors %}
+                    {% for error in form.option46.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 7 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 7</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question7 %}
+        {% if form.question7.errors %}
+            {% for error in form.question7.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option17 %}
+                {% if form.option17.errors %}
+                    {% for error in form.option17.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option27 %}
+                {% if form.option27.errors %}
+                    {% for error in form.option27.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option37 %}
+                {% if form.option37.errors %}
+                    {% for error in form.option37.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option47 %}
+                {% if form.option47.errors %}
+                    {% for error in form.option47.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 8 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 8</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question8 %}
+        {% if form.question8.errors %}
+            {% for error in form.question8.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option18 %}
+                {% if form.option18.errors %}
+                    {% for error in form.option18.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option28 %}
+                {% if form.option28.errors %}
+                    {% for error in form.option28.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option38 %}
+                {% if form.option38.errors %}
+                    {% for error in form.option38.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option48 %}
+                {% if form.option48.errors %}
+                    {% for error in form.option48.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+
+{# Question 9 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 9</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question9 %}
+        {% if form.question9.errors %}
+            {% for error in form.question9.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option19 %}
+                {% if form.option19.errors %}
+                    {% for error in form.option19.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option29 %}
+                {% if form.option29.errors %}
+                    {% for error in form.option29.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option39 %}
+                {% if form.option39.errors %}
+                    {% for error in form.option39.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option49 %}
+                {% if form.option49.errors %}
+                    {% for error in form.option49.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+{# Question 10 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Question 10</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.question10 %}
+        {% if form.question10.errors %}
+            {% for error in form.question10.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+{# option 1 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 1</label><br>
+            {% crispy_field form.option10 %}
+                {% if form.option10.errors %}
+                    {% for error in form.option10.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 2 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 2</label><br>
+            {% crispy_field form.option20 %}
+                {% if form.option20.errors %}
+                    {% for error in form.option20.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 3 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 3</label><br>
+            {% crispy_field form.option30 %}
+                {% if form.option30.errors %}
+                    {% for error in form.option30.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+{# option 4 #}
+    <div class="card card-success">
+        <div class="card-body"style="background-color: lightskyblue">
+            <label style="color: teal;font-weight: 500;">Option 4</label><br>
+            {% crispy_field form.option40 %}
+                {% if form.option40.errors %}
+                    {% for error in form.option40.errors %}
+                        <div class="invalid-feedback">
+                        {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
+{% endblock %}
