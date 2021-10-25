@@ -21,6 +21,20 @@
         </div>
         </div>
     </div>
+<div class="card card-success">
+        <div class="card-body"style="background-color: deepskyblue">
+            <label style="color: black;font-weight: 5000;">Timer</label><br>
+            {# <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg"> #}
+        {% crispy_field form.timer %}
+        {% if form.timer.errors %}
+            {% for error in form.timer.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
 {# Question 1 #}
     <div class="card card-success">
         <div class="card-body"style="background-color: deepskyblue">

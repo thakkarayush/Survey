@@ -11,11 +11,12 @@
         border-spacing: 10px;
     }
     </style>
+
 {% endblock %}
 {% block body %}
 {% for values in CreateSurvey %}
     <form>
-    <table style="width:100%">
+    <table style="width:100%"0>
     <tr style="background-color: skyblue"><td><center>{{ values.heading }}</center><br></td></tr>
     <tr style="background-color: deepskyblue"><td>1.{{ values.question1 }}<br></td></tr>
     <tr style="background-color: lightskyblue"><td><input type="radio" name="q1" value="{{ values.option1 }}">{{ values.option1 }}<br></td></tr>
@@ -78,9 +79,28 @@
     <tr style="background-color: lightskyblue"><td><input type="radio" name="q10" value="{{ values.option40 }}">{{ values.option40 }}<br></td></tr>
     </table>
     <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
     </div>
+    <input type="checkbox" id="delay">
 
     </form>
 {% endfor %}
+{% endblock %}
+{% block extra_js %}
+    <script>
+        var seonds=1;
+        function timer()
+        {
+            document.getElementById("sec").innerHTML=seconds;
+            seconds++;
+            if(seconds=={{ values.timer }}){
+                document.addEventListener('DOMContentLoaded',function () {
+                    document.querySelector("#delay").innerHTML = "You have exceeded time";
+
+                }
+            }
+
+        }
+        setTimeout(1000,timer);
+    </script>
 {% endblock %}

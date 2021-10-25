@@ -6,6 +6,7 @@ from django.urls import reverse
 
 class CreateSurvey(models.Model):
     heading=models.CharField(max_length=100,null=True,blank=True)
+    timer=models.IntegerField()
 
     question1 = models.CharField(max_length=200, null=True, blank=True)
     option1 = models.CharField(max_length=100, null=True, blank=True)

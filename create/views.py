@@ -14,3 +14,6 @@ class ListSurveyView(ListView):
 class DeleteSurveyView(DeleteView):
     model = CreateSurvey
     success_url = 'create/view'
+
+class DetailView(DetailView):
+    model = CreateSurvey
